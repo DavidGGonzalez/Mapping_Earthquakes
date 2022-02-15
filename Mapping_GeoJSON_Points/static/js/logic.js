@@ -25,8 +25,11 @@ let map = L.map('mapid').setView([30, 30], 2);
 // ]};
 
 
+//let airportData = "https://raw.githubusercontent.com/DavidGonzalez/Mapping_Earthquakes/Mapping_GeoJSON_Points/static/js/majorAirports.json";
+let airportData = "majorAirports.json"
+
 // Grab data
-d3.json("majorAirports.json").then(function(data) {
+d3.json(airportData).then(function(data) {
     console.log(data);
     l.geoJSON(data).addTo(map);
 })
